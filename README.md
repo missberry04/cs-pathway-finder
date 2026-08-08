@@ -1,5 +1,7 @@
 # PathwayCS
 
+**Live demo:** [cs-pathway-finder.vercel.app](https://cs-pathway-finder.vercel.app/)
+
 **A roadmap generator for breaking into tech.** Pick a field — software engineering, cybersecurity, data science, AI/ML, cloud/DevOps, or data engineering — and get a phased, resource-linked plan (real Coursera/Udemy/TryHackMe/LeetCode links, not vague advice), current job-market stats, and interview prep. A short quiz can also recommend a pathway based on your degree, experience, and available time.
 
 No account needed to use it. Progress is tracked in the browser by default; signing in is optional and just syncs that progress across devices.
@@ -59,6 +61,6 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 ## Possible next steps
 
-- Deploy (Vercel + a hosted Postgres in place of local SQLite)
+- Move from local SQLite to a hosted Postgres for production durability
 - Community-editable resource links, so course recommendations don't go stale
 - Export a generated plan to a calendar (.ics) or PDF

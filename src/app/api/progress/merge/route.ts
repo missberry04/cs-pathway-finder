@@ -18,22 +18,16 @@ export async function POST(request: NextRequest) {
       typeof (item as Record<string, unknown>).milestoneId === "string"
   );
 
-  // SQLite's createMany doesn't support skipDuplicates, so upsert each item individually.
-  await Promise.all(
-    valid.map((item) =>
-      prisma.progressItem.upsert({
-        where: {
-          userId_pathwaySlug_milestoneId: {
-            userId: session.userId,
-            pathwaySlug: item.pathwaySlug,
-            milestoneId: item.milestoneId,
-          },
-        },
-        create: { userId: session.userId, pathwaySlug: item.pathwaySlug, milestoneId: item.milestoneId },
-        update: {},
-      })
-    )
-  );
+  if (valid.length > 0) {
+    await prisma.progressItem.createMany({
+      data: valid.map((item) => ({
+        userId: session.userId,
+        pathwaySlug: item.pathwaySlug,
+        milestoneId: item.milestoneId,
+      })),
+      skipDuplicates: true,
+    });
+  }
 
   const allItems = await prisma.progressItem.findMany({
     where: { userId: session.userId },

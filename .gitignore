@@ -35,6 +35,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+.agents
+.claude
+skills-lock.json
 
 # prisma
 /prisma/dev.db
@@ -43,3 +46,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*

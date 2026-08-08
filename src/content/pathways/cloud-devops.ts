@@ -128,6 +128,7 @@ export const cloudDevops: Pathway = {
       "Virtually every company is migrating to or already on the cloud, and there aren't enough certified engineers to fill roles. Certs carry unusually heavy weight here for getting past initial screens.",
     commonTitles: ["Cloud Engineer", "DevOps Engineer", "Site Reliability Engineer", "Cloud Support Engineer"],
     typicalTimeToJobReadyMonths: [7, 13],
+    experienceLevel: "entry-level",
   },
   interviewPrep: {
     format: [
@@ -140,6 +141,7 @@ export const cloudDevops: Pathway = {
       "Real hands-on project experience, not just certification knowledge",
       "Troubleshooting mindset: can you debug a broken deploy under pressure",
       "Scripting ability to automate repetitive ops work",
+      "Increasingly: cost-awareness (FinOps), since cloud spend has become a board-level concern at most companies",
     ],
     sampleQuestions: [
       "Walk me through what happens when you deploy a containerized app to production",

@@ -131,6 +131,7 @@ export const cybersecurity: Pathway = {
       "One of the most consistently understaffed fields in tech: a global shortage of millions of security workers. Entry-level SOC/analyst roles are the most accessible on-ramp; certs matter more here than in most CS fields for getting past resume screens.",
     commonTitles: ["SOC Analyst", "Security Analyst", "Penetration Tester", "GRC Analyst", "Cloud Security Engineer"],
     typicalTimeToJobReadyMonths: [6, 12],
+    experienceLevel: "entry-level",
   },
   interviewPrep: {
     format: [
@@ -143,6 +144,7 @@ export const cybersecurity: Pathway = {
       "Relevant certs (Security+ minimum for many analyst roles)",
       "Evidence of hands-on practice: CTFs, home lab, TryHackMe/HTB profile",
       "Ability to explain a vulnerability/incident clearly to a non-technical person",
+      "Increasingly: familiarity with cloud security (most breaches now involve misconfigured cloud infrastructure), not just on-prem networking",
     ],
     sampleQuestions: [
       "Walk me through what happens when you type a URL into a browser",

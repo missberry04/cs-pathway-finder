@@ -21,7 +21,7 @@ export const DEGREE_OPTIONS: { id: DegreeField; label: string }[] = [
 ];
 
 export const EXPERIENCE_OPTIONS: { id: ExperienceLevel; label: string }[] = [
-  { id: "none", label: "No relevant experience yet" },
+  { id: "none", label: "No relevant experience yet (e.g., student or full career switcher)" },
   { id: "some-hobby", label: "Some hobby projects / self-study" },
   { id: "1-3-years-adjacent", label: "1–3 years in an adjacent role (IT, analytics, support, etc.)" },
   { id: "3-plus-years-adjacent", label: "3+ years in an adjacent technical role" },
@@ -59,6 +59,9 @@ export const SKILL_OPTIONS: { id: string; label: string }[] = [
   { id: "scripting", label: "Scripting / automation" },
   { id: "systems design", label: "Systems design" },
   { id: "research", label: "Reading research / papers" },
+  { id: "ui development", label: "UI/UX design or visual polish" },
+  { id: "troubleshooting", label: "Troubleshooting / debugging" },
+  { id: "attention to detail", label: "Attention to detail" },
 ];
 
 /** How well each degree background fits each pathway, 0-1. Tuned by hand, not derived from data. */
@@ -69,6 +72,19 @@ const DEGREE_FIT: Record<string, Record<DegreeField, number>> = {
   "ai-ml": { "cs-related": 0.9, "quant-other": 0.9, "it-related": 0.3, "non-technical": 0.15, "self-taught-bootcamp": 0.35 },
   "cloud-devops": { "cs-related": 0.8, "quant-other": 0.5, "it-related": 1.0, "non-technical": 0.3, "self-taught-bootcamp": 0.6 },
   "data-engineering": { "cs-related": 0.9, "quant-other": 0.7, "it-related": 0.6, "non-technical": 0.2, "self-taught-bootcamp": 0.5 },
+  "mobile-development": { "cs-related": 0.9, "quant-other": 0.5, "it-related": 0.4, "non-technical": 0.15, "self-taught-bootcamp": 0.6 },
+  "game-development": { "cs-related": 0.9, "quant-other": 0.6, "it-related": 0.3, "non-technical": 0.15, "self-taught-bootcamp": 0.5 },
+  "qa-test-automation": { "cs-related": 0.7, "quant-other": 0.5, "it-related": 0.7, "non-technical": 0.5, "self-taught-bootcamp": 0.7 },
+  "ux-ui-design": { "cs-related": 0.3, "quant-other": 0.25, "it-related": 0.2, "non-technical": 0.6, "self-taught-bootcamp": 0.7 },
+  "software-architecture": { "cs-related": 1.0, "quant-other": 0.6, "it-related": 0.4, "non-technical": 0.1, "self-taught-bootcamp": 0.5 },
+  "it-support-sysadmin": { "cs-related": 0.6, "quant-other": 0.4, "it-related": 0.9, "non-technical": 0.7, "self-taught-bootcamp": 0.8 },
+};
+
+/** How well a pathway's expected experience level matches the user's actual experience, 0-1. */
+const EXPERIENCE_FIT: Record<Pathway["stats"]["experienceLevel"], Record<ExperienceLevel, number>> = {
+  "entry-level": { none: 1.0, "some-hobby": 1.0, "1-3-years-adjacent": 0.95, "3-plus-years-adjacent": 0.85 },
+  "some-experience-helpful": { none: 0.55, "some-hobby": 0.75, "1-3-years-adjacent": 1.0, "3-plus-years-adjacent": 0.95 },
+  "requires-experience": { none: 0.1, "some-hobby": 0.2, "1-3-years-adjacent": 0.65, "3-plus-years-adjacent": 1.0 },
 };
 
 const EXPERIENCE_DISCOUNT: Record<ExperienceLevel, number> = {
@@ -121,17 +137,27 @@ export function scorePathways(pathways: Pathway[], profile: BackgroundProfile): 
   const matches = pathways.map((pathway) => {
     const reasons: string[] = [];
 
-    // Skill overlap: up to 35 points
+    // Skill overlap: up to 25 points
     const overlap = pathway.matchProfile.skills.filter((s) => profile.skills.includes(s));
-    const skillScore = Math.min(1, overlap.length / 3) * 35;
+    const skillScore = Math.min(1, overlap.length / 3) * 25;
     if (overlap.length > 0) {
       reasons.push(`Matches ${overlap.length} of your listed skills (${overlap.slice(0, 3).join(", ")})`);
     }
 
-    // Degree fit: up to 25 points
+    // Degree fit: up to 20 points
     const degreeFit = DEGREE_FIT[pathway.slug]?.[profile.degreeField] ?? 0.5;
-    const degreeScore = degreeFit * 25;
+    const degreeScore = degreeFit * 20;
     if (degreeFit >= 0.8) reasons.push("Your educational background lines up well with this field");
+
+    // Experience fit: up to 15 points. This is what keeps a college student with no
+    // experience from getting pointed at something like Software Architecture.
+    const experienceFit = EXPERIENCE_FIT[pathway.stats.experienceLevel][profile.experienceLevel];
+    const experienceScore = experienceFit * 15;
+    if (pathway.stats.experienceLevel === "entry-level" && (profile.experienceLevel === "none" || profile.experienceLevel === "some-hobby")) {
+      reasons.push("Realistic as a first tech job, no prior experience required");
+    } else if (pathway.stats.experienceLevel === "requires-experience" && (profile.experienceLevel === "none" || profile.experienceLevel === "some-hobby")) {
+      reasons.push("Heads up: this one typically expects prior professional experience, so it may be a stretch as a first role");
+    }
 
     // Timeline fit vs urgency: up to 20 points
     const adjustedMonths = adjustedMonthsForProfile(pathway, profile);
@@ -152,7 +178,7 @@ export function scorePathways(pathways: Pathway[], profile: BackgroundProfile): 
       reasons.push(`${pathway.stats.demandLevel === "very high" ? "Very high" : "High"} current job-market demand (${pathway.stats.growthOutlook.split(" ")[0]} projected growth)`);
     }
 
-    const score = Math.round(skillScore + degreeScore + urgencyScore + marketScore);
+    const score = Math.round(skillScore + degreeScore + experienceScore + urgencyScore + marketScore);
 
     return { pathway, score, adjustedMonths, reasons };
   });

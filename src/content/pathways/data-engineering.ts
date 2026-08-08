@@ -127,6 +127,7 @@ export const dataEngineering: Pathway = {
       "Every company generating data needs pipelines to move and organize it; the field is less saturated at entry level than data science because it's less well-known as a distinct career path.",
     commonTitles: ["Data Engineer", "Analytics Engineer", "ETL Developer", "Big Data Engineer"],
     typicalTimeToJobReadyMonths: [8, 14],
+    experienceLevel: "some-experience-helpful",
   },
   interviewPrep: {
     format: [
@@ -140,6 +141,7 @@ export const dataEngineering: Pathway = {
       "Understanding of tradeoffs between batch vs streaming, normalization vs denormalization",
       "Experience with at least one orchestration tool (Airflow is the most commonly asked about)",
       "Ability to reason about pipeline reliability and failure handling",
+      "Increasingly: experience with the modern cloud data stack (dbt, Snowflake/BigQuery), which has mostly replaced older on-prem ETL tools in job postings",
     ],
     sampleQuestions: [
       "Design a data pipeline to ingest and process clickstream data in near real-time",

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { Pathway } from "@/content/types";
 
+const EXPERIENCE_BADGE: Record<Pathway["stats"]["experienceLevel"], string> = {
+  "entry-level": "🎓 Entry-level friendly",
+  "some-experience-helpful": "🧭 Some experience helps",
+  "requires-experience": "⚠️ Needs prior experience",
+};
+
 export function PathwayCard({ pathway }: { pathway: Pathway }) {
   return (
     <Link
@@ -13,6 +19,7 @@ export function PathwayCard({ pathway }: { pathway: Pathway }) {
         <p className="mt-1 text-sm text-black/60 dark:text-white/60">{pathway.tagline}</p>
       </div>
       <div className="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-2 text-xs text-black/50 dark:text-white/50">
+        <span>{EXPERIENCE_BADGE[pathway.stats.experienceLevel]}</span>
         <span>💰 {pathway.stats.entrySalaryUSD} entry</span>
         <span>⏱ {pathway.stats.typicalTimeToJobReadyMonths[0]}–{pathway.stats.typicalTimeToJobReadyMonths[1]} mo</span>
         <span>📈 {pathway.stats.demandLevel} demand</span>

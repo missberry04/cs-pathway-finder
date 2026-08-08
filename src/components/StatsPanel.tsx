@@ -1,9 +1,31 @@
 import { JobStats } from "@/content/types";
 
+const EXPERIENCE_LEVEL_DISPLAY: Record<JobStats["experienceLevel"], { label: string; badgeClass: string }> = {
+  "entry-level": {
+    label: "Good first tech job: no experience required",
+    badgeClass: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
+  },
+  "some-experience-helpful": {
+    label: "Doable as a first job, but some experience helps",
+    badgeClass: "bg-amber-500/10 text-amber-700 dark:text-amber-400",
+  },
+  "requires-experience": {
+    label: "Typically requires prior professional experience",
+    badgeClass: "bg-rose-500/10 text-rose-700 dark:text-rose-400",
+  },
+};
+
 export function StatsPanel({ stats }: { stats: JobStats }) {
+  const experience = EXPERIENCE_LEVEL_DISPLAY[stats.experienceLevel];
+
   return (
     <div className="rounded-xl border border-black/10 p-6 dark:border-white/10">
       <h3 className="mb-4 text-lg font-semibold">Job market & pay</h3>
+
+      <span className={`mb-4 inline-block rounded-full px-3 py-1 text-xs font-medium ${experience.badgeClass}`}>
+        {experience.label}
+      </span>
+
       <dl className="grid grid-cols-2 gap-4 text-sm sm:grid-cols-3">
         <Stat label="Median salary" value={stats.medianSalaryUSD} />
         <Stat label="Entry salary" value={stats.entrySalaryUSD} />

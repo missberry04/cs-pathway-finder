@@ -118,6 +118,7 @@ export const dataScience: Pathway = {
       "'Data Scientist' as a first job is competitive and often requires a master's or strong portfolio; 'Data Analyst' is a much more accessible entry point with high demand across every industry, not just tech.",
     commonTitles: ["Data Analyst", "Data Scientist", "Business Intelligence Analyst", "Quantitative Analyst"],
     typicalTimeToJobReadyMonths: [8, 14],
+    experienceLevel: "entry-level",
   },
   interviewPrep: {
     format: [
@@ -130,6 +131,7 @@ export const dataScience: Pathway = {
       "Solid SQL: this is tested almost everywhere, more than ML theory for entry roles",
       "Clear communication of findings to non-technical stakeholders",
       "A portfolio with real analysis, not just copied Kaggle notebooks",
+      "Increasingly: judgment about when a simple query or model beats a complex one, since basic modeling is now commoditized by AI tools",
     ],
     sampleQuestions: [
       "Write a SQL query to find the second-highest salary per department",

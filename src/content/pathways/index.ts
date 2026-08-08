@@ -5,6 +5,12 @@ import { dataScience } from "./data-science";
 import { aiMl } from "./ai-ml";
 import { cloudDevops } from "./cloud-devops";
 import { dataEngineering } from "./data-engineering";
+import { mobileDevelopment } from "./mobile-development";
+import { gameDevelopment } from "./game-development";
+import { qaTestAutomation } from "./qa-test-automation";
+import { uxUiDesign } from "./ux-ui-design";
+import { softwareArchitecture } from "./software-architecture";
+import { itSupportSysadmin } from "./it-support-sysadmin";
 
 export const pathways: Pathway[] = [
   softwareEngineering,
@@ -13,6 +19,12 @@ export const pathways: Pathway[] = [
   aiMl,
   cloudDevops,
   dataEngineering,
+  mobileDevelopment,
+  gameDevelopment,
+  qaTestAutomation,
+  uxUiDesign,
+  itSupportSysadmin,
+  softwareArchitecture,
 ];
 
 export function getPathway(slug: string): Pathway | undefined {

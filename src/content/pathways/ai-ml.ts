@@ -121,6 +121,7 @@ export const aiMl: Pathway = {
       "Extremely high demand and pay, but also the most credential/portfolio-competitive pathway here: many entry 'ML Engineer' postings expect a master's/PhD or very strong project experience. A common route is entering as a SWE or Data Scientist first, then specializing.",
     commonTitles: ["Machine Learning Engineer", "Applied Scientist", "AI Engineer", "Research Engineer"],
     typicalTimeToJobReadyMonths: [12, 20],
+    experienceLevel: "requires-experience",
   },
   interviewPrep: {
     format: [
@@ -134,6 +135,7 @@ export const aiMl: Pathway = {
       "Ability to justify metric/model choices for a given business problem",
       "Practical deployment experience (not just notebooks, actual serving/monitoring)",
       "For research-leaning roles: published work or strong independent projects",
+      "Increasingly: hands-on experience with LLMs/agents specifically, since demand has shifted hard toward applied generative AI in the last few years",
     ],
     sampleQuestions: [
       "Explain the bias-variance tradeoff",

@@ -34,6 +34,8 @@ export type JobStats = {
   commonTitles: string[];
   /** Realistic time for a dedicated beginner to become job-ready, in months, at baseline ~10hrs/week */
   typicalTimeToJobReadyMonths: [number, number];
+  /** Whether this is realistically a first tech job, or one that expects prior experience */
+  experienceLevel: "entry-level" | "some-experience-helpful" | "requires-experience";
 };
 
 export type InterviewPrep = {

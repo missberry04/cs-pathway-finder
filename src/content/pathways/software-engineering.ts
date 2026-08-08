@@ -133,6 +133,7 @@ export const softwareEngineering: Pathway = {
       "Entry-level SWE hiring has gotten more competitive since 2023 due to layoffs and AI-tooling productivity gains, but demand for engineers who can ship real projects and reason about systems remains strong, especially outside big-name tech.",
     commonTitles: ["Software Engineer", "Full-Stack Developer", "Backend Engineer", "Frontend Engineer"],
     typicalTimeToJobReadyMonths: [9, 15],
+    experienceLevel: "entry-level",
   },
   interviewPrep: {
     format: [
@@ -146,6 +147,7 @@ export const softwareEngineering: Pathway = {
       "Real shipped projects, not just tutorials followed step by step",
       "Basic system design intuition for mid-level roles",
       "Genuine curiosity about their product/stack",
+      "Increasingly: comfort using AI coding assistants well, not avoiding them, paired with the judgment to review and debug what they produce",
     ],
     sampleQuestions: [
       "Reverse a linked list / detect a cycle in a linked list",

@@ -40,7 +40,7 @@ export default function SignInPage() {
     <div className="mx-auto max-w-md px-6 py-16">
       <h1 className="mb-2 text-2xl font-semibold">{mode === "sign-in" ? "Sign in" : "Create an account"}</h1>
       <p className="mb-6 text-sm text-black/60 dark:text-white/60">
-        Signing in is completely optional — your progress is already saved in this browser. Create an account only if
+        Signing in is completely optional. Your progress is already saved in this browser; create an account only if
         you want it to sync across devices.
       </p>
 

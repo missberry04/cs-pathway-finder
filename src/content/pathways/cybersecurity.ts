@@ -18,12 +18,12 @@ export const cybersecurity: Pathway = {
     {
       id: "fundamentals",
       title: "Phase 1: Networking & Systems Fundamentals",
-      summary: "You can't secure what you don't understand — learn how networks and systems actually work.",
+      summary: "You can't secure what you don't understand: learn how networks and systems actually work.",
       milestones: [
         {
           id: "networking-basics",
           title: "Learn networking fundamentals",
-          description: "TCP/IP, DNS, HTTP, subnetting, firewalls — the language of the internet.",
+          description: "TCP/IP, DNS, HTTP, subnetting, firewalls: the language of the internet.",
           estWeeks: [4, 6],
           resources: [
             { title: "TryHackMe: Pre Security Path", type: "course", provider: "TryHackMe", url: "https://tryhackme.com/path/outline/presecurity", free: false },
@@ -33,7 +33,7 @@ export const cybersecurity: Pathway = {
         {
           id: "linux-basics",
           title: "Get comfortable with Linux & the command line",
-          description: "Security tooling lives on Linux — file permissions, bash, package managers, scripting basics.",
+          description: "Security tooling lives on Linux: file permissions, bash, package managers, scripting basics.",
           estWeeks: [3, 5],
           resources: [
             { title: "TryHackMe: Linux Fundamentals", type: "course", provider: "TryHackMe", url: "https://tryhackme.com/room/linuxfundamentalspart1", free: false },
@@ -71,7 +71,7 @@ export const cybersecurity: Pathway = {
     {
       id: "specialize",
       title: "Phase 3: Pick a Specialization",
-      summary: "Cybersecurity branches early — choose offense, defense, or cloud security and go deeper.",
+      summary: "Cybersecurity branches early: choose offense, defense, or cloud security and go deeper.",
       milestones: [
         {
           id: "htb-practice",
@@ -103,7 +103,7 @@ export const cybersecurity: Pathway = {
         {
           id: "home-lab-ctf",
           title: "Build a home lab & compete in CTFs",
-          description: "Set up a vulnerable VM lab and participate in a few CTFs — great talking points in interviews.",
+          description: "Set up a vulnerable VM lab and participate in a few CTFs, great talking points in interviews.",
           estWeeks: [3, 6],
           resources: [
             { title: "CTFtime (find live CTFs)", type: "practice", provider: "CTFtime", url: "https://ctftime.org/", free: true },
@@ -128,7 +128,7 @@ export const cybersecurity: Pathway = {
     demandLevel: "very high",
     competitiveness: "medium",
     demandNotes:
-      "One of the most consistently understaffed fields in tech — global shortage of millions of security workers. Entry-level SOC/analyst roles are the most accessible on-ramp; certs matter more here than in most CS fields for getting past resume screens.",
+      "One of the most consistently understaffed fields in tech: a global shortage of millions of security workers. Entry-level SOC/analyst roles are the most accessible on-ramp; certs matter more here than in most CS fields for getting past resume screens.",
     commonTitles: ["SOC Analyst", "Security Analyst", "Penetration Tester", "GRC Analyst", "Cloud Security Engineer"],
     typicalTimeToJobReadyMonths: [6, 12],
   },
@@ -151,7 +151,7 @@ export const cybersecurity: Pathway = {
       "Describe a CTF challenge or lab you found difficult and how you solved it",
     ],
     tips: [
-      "Link your TryHackMe/HTB profile on your resume — it's concrete proof of skill",
+      "Link your TryHackMe/HTB profile on your resume: it's concrete proof of skill",
       "Certs get you past ATS filters; labs/CTFs get you through the actual interview",
       "Security+ is the most commonly requested baseline cert in entry-level job postings",
     ],

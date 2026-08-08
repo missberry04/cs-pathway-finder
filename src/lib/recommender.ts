@@ -17,7 +17,7 @@ export const DEGREE_OPTIONS: { id: DegreeField; label: string }[] = [
   { id: "quant-other", label: "Other quantitative degree (Math, Stats, Econ, Physics, Engineering)" },
   { id: "it-related", label: "IT / Information Systems degree" },
   { id: "non-technical", label: "Non-technical degree" },
-  { id: "self-taught-bootcamp", label: "No degree — bootcamp / self-taught" },
+  { id: "self-taught-bootcamp", label: "No degree, bootcamp / self-taught" },
 ];
 
 export const EXPERIENCE_OPTIONS: { id: ExperienceLevel; label: string }[] = [
@@ -28,16 +28,16 @@ export const EXPERIENCE_OPTIONS: { id: ExperienceLevel; label: string }[] = [
 ];
 
 export const URGENCY_OPTIONS: { id: Urgency; label: string }[] = [
-  { id: "asap", label: "ASAP — need a job within ~6 months" },
+  { id: "asap", label: "ASAP, need a job within ~6 months" },
   { id: "6-12-months", label: "6–12 months is fine" },
   { id: "flexible", label: "Flexible / long-term career change" },
 ];
 
 export const HOURS_OPTIONS: { value: number; label: string }[] = [
-  { value: 5, label: "~5 hrs/week — squeezing it in around a demanding job" },
-  { value: 10, label: "~10 hrs/week — steady part-time pace" },
-  { value: 20, label: "~20 hrs/week — serious part-time commitment" },
-  { value: 35, label: "35+ hrs/week — treating this like a full-time job" },
+  { value: 5, label: "~5 hrs/week, squeezing it in around a demanding job" },
+  { value: 10, label: "~10 hrs/week, steady part-time pace" },
+  { value: 20, label: "~20 hrs/week, serious part-time commitment" },
+  { value: 35, label: "35+ hrs/week, treating this like a full-time job" },
 ];
 
 export const SKILL_OPTIONS: { id: string; label: string }[] = [
@@ -121,19 +121,19 @@ export function scorePathways(pathways: Pathway[], profile: BackgroundProfile): 
   const matches = pathways.map((pathway) => {
     const reasons: string[] = [];
 
-    // Skill overlap — up to 35 points
+    // Skill overlap: up to 35 points
     const overlap = pathway.matchProfile.skills.filter((s) => profile.skills.includes(s));
     const skillScore = Math.min(1, overlap.length / 3) * 35;
     if (overlap.length > 0) {
       reasons.push(`Matches ${overlap.length} of your listed skills (${overlap.slice(0, 3).join(", ")})`);
     }
 
-    // Degree fit — up to 25 points
+    // Degree fit: up to 25 points
     const degreeFit = DEGREE_FIT[pathway.slug]?.[profile.degreeField] ?? 0.5;
     const degreeScore = degreeFit * 25;
     if (degreeFit >= 0.8) reasons.push("Your educational background lines up well with this field");
 
-    // Timeline fit vs urgency — up to 20 points
+    // Timeline fit vs urgency: up to 20 points
     const adjustedMonths = adjustedMonthsForProfile(pathway, profile);
     let urgencyScore = 0;
     if (profile.urgency === "asap") {
@@ -146,7 +146,7 @@ export function scorePathways(pathways: Pathway[], profile: BackgroundProfile): 
       urgencyScore = 0.7 * 20;
     }
 
-    // Market factor — up to 20 points
+    // Market factor: up to 20 points
     const marketScore = ((DEMAND_WEIGHT[pathway.stats.demandLevel] + COMPETITIVENESS_WEIGHT[pathway.stats.competitiveness]) / 2) * 20;
     if (pathway.stats.demandLevel === "very high" || pathway.stats.demandLevel === "high") {
       reasons.push(`${pathway.stats.demandLevel === "very high" ? "Very high" : "High"} current job-market demand (${pathway.stats.growthOutlook.split(" ")[0]} projected growth)`);

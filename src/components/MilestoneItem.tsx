@@ -43,7 +43,7 @@ export function MilestoneItem({
                 {r.title}
               </a>{" "}
               <span className="text-black/50 dark:text-white/50">
-                — {r.provider} · {RESOURCE_TYPE_LABEL[r.type]} · {r.free ? "Free" : "Paid"}
+                {r.provider} · {RESOURCE_TYPE_LABEL[r.type]} · {r.free ? "Free" : "Paid"}
               </span>
             </li>
           ))}

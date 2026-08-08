@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PathwayCS — Your roadmap into any CS career",
+  title: "PathwayCS: Your roadmap into any CS career",
   description: "Detailed, timelined roadmaps for breaking into software engineering, cybersecurity, data science, AI/ML, cloud/DevOps, and data engineering.",
 };
 

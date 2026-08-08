@@ -77,7 +77,7 @@ export const softwareEngineering: Pathway = {
         {
           id: "fullstack-project",
           title: "Build a full-stack web app",
-          description: "A CRUD app with auth, a database, and a deployed live link — this is your #1 portfolio piece.",
+          description: "A CRUD app with auth, a database, and a deployed live link: this is your #1 portfolio piece.",
           estWeeks: [4, 8],
           resources: [
             { title: "Full Stack Open", type: "course", provider: "University of Helsinki", url: "https://fullstackopen.com/en/", free: true },
@@ -103,7 +103,7 @@ export const softwareEngineering: Pathway = {
         {
           id: "system-design-basics",
           title: "Learn system design basics",
-          description: "APIs, databases, caching, load balancing — enough to pass entry/mid-level system design rounds.",
+          description: "APIs, databases, caching, load balancing: enough to pass entry/mid-level system design rounds.",
           estWeeks: [3, 5],
           resources: [
             { title: "System Design Primer", type: "reading", provider: "GitHub (donnemartin)", url: "https://github.com/donnemartin/system-design-primer", free: true },
@@ -141,7 +141,7 @@ export const softwareEngineering: Pathway = {
       "Onsite/virtual loop: 2-4 coding rounds + 1 system design (mid-level+) + 1 behavioral",
     ],
     whatEmployersLookFor: [
-      "Clean, working code under time pressure — not just the 'optimal' answer",
+      "Clean, working code under time pressure, not just the 'optimal' answer",
       "Clear communication of your thought process while solving problems",
       "Real shipped projects, not just tutorials followed step by step",
       "Basic system design intuition for mid-level roles",
@@ -155,7 +155,7 @@ export const softwareEngineering: Pathway = {
     ],
     tips: [
       "Practice explaining your approach out loud before you start typing",
-      "Know your own portfolio projects cold — be ready for deep follow-up questions",
+      "Know your own portfolio projects cold: be ready for deep follow-up questions",
       "Apply broadly early rather than waiting until you feel '100% ready'",
     ],
   },

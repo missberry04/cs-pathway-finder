@@ -23,7 +23,7 @@ export const dataEngineering: Pathway = {
         {
           id: "sql-advanced",
           title: "Master SQL (including advanced querying)",
-          description: "Joins, window functions, query optimization, indexing — data engineers live in SQL.",
+          description: "Joins, window functions, query optimization, indexing: data engineers live in SQL.",
           estWeeks: [4, 6],
           resources: [
             { title: "SQL for Data Science", type: "course", provider: "Coursera (UC Davis)", url: "https://www.coursera.org/learn/sql-for-data-science", free: false },
@@ -33,7 +33,7 @@ export const dataEngineering: Pathway = {
         {
           id: "python-etl",
           title: "Learn Python for data pipelines",
-          description: "Scripting, working with APIs, pandas — the glue for ETL work.",
+          description: "Scripting, working with APIs, pandas: the glue for ETL work.",
           estWeeks: [4, 6],
           resources: [
             { title: "Python for Everybody", type: "course", provider: "Coursera (Michigan)", url: "https://www.coursera.org/specializations/python", free: false },
@@ -42,7 +42,7 @@ export const dataEngineering: Pathway = {
         {
           id: "data-modeling",
           title: "Learn data modeling & warehousing concepts",
-          description: "Star schemas, normalization, OLTP vs OLAP — how to structure data for scale.",
+          description: "Star schemas, normalization, OLTP vs OLAP: how to structure data for scale.",
           estWeeks: [3, 5],
           resources: [
             { title: "Data Warehousing for Business Intelligence", type: "course", provider: "Coursera (Colorado)", url: "https://www.coursera.org/specializations/data-warehousing", free: false },
@@ -83,7 +83,7 @@ export const dataEngineering: Pathway = {
         {
           id: "warehouse-platform",
           title: "Learn a cloud data warehouse",
-          description: "Snowflake, BigQuery, or Redshift — pick one and get hands-on.",
+          description: "Snowflake, BigQuery, or Redshift: pick one and get hands-on.",
           estWeeks: [4, 8],
           resources: [
             { title: "Snowflake Hands-On Essentials", type: "course", provider: "Snowflake (free)", url: "https://www.snowflake.com/en/developers/learn-to-code/", free: true },
@@ -136,7 +136,7 @@ export const dataEngineering: Pathway = {
       "Behavioral",
     ],
     whatEmployersLookFor: [
-      "Strong, fast SQL — this is non-negotiable",
+      "Strong, fast SQL: this is non-negotiable",
       "Understanding of tradeoffs between batch vs streaming, normalization vs denormalization",
       "Experience with at least one orchestration tool (Airflow is the most commonly asked about)",
       "Ability to reason about pipeline reliability and failure handling",
@@ -145,12 +145,12 @@ export const dataEngineering: Pathway = {
       "Design a data pipeline to ingest and process clickstream data in near real-time",
       "Write a SQL query using window functions to find running totals per user",
       "How would you handle a pipeline that partially fails halfway through?",
-      "Star schema vs snowflake schema — when would you use each?",
+      "Star schema vs snowflake schema: when would you use each?",
     ],
     tips: [
       "Be ready to whiteboard a pipeline architecture, not just write queries",
       "Know at least one orchestration tool (Airflow) and one warehouse (Snowflake/BigQuery) in depth",
-      "Talk about data quality/validation — it's an easy way to stand out",
+      "Talk about data quality/validation: it's an easy way to stand out",
     ],
   },
 };

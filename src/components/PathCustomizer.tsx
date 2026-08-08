@@ -79,7 +79,7 @@ export function PathCustomizer({ pathway }: { pathway: Pathway }) {
     <div className="rounded-xl border border-black/10 p-6 dark:border-white/10">
       <h3 className="mb-1 text-lg font-semibold">Customize your plan</h3>
       <p className="mb-5 text-sm text-black/60 dark:text-white/60">
-        Set your available time and mark anything you already know — we&apos;ll generate a calendar timeline.
+        Set your available time and mark anything you already know, and we&apos;ll generate a calendar timeline.
       </p>
 
       <div className="mb-5">
@@ -125,7 +125,7 @@ export function PathCustomizer({ pathway }: { pathway: Pathway }) {
             <ul className="flex flex-col gap-1.5 border-l border-black/10 pl-4 dark:border-white/10">
               {monthRows.map((row, i) => (
                 <li key={`${row.phaseId}-${i}`} className="text-sm">
-                  <span className="text-black/50 dark:text-white/50">{formatDate(row.end)} — </span>
+                  <span className="text-black/50 dark:text-white/50">{formatDate(row.end)}: </span>
                   {row.milestoneTitle}
                 </li>
               ))}

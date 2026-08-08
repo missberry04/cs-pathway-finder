@@ -3,7 +3,7 @@ import { Pathway } from "../types";
 export const cloudDevops: Pathway = {
   slug: "cloud-devops",
   title: "Cloud & DevOps",
-  tagline: "Run the infrastructure everything else runs on — cloud, CI/CD, and automation.",
+  tagline: "Run the infrastructure everything else runs on: cloud, CI/CD, and automation.",
   icon: "☁️",
   matchProfile: {
     degrees: ["Computer Science", "Information Technology", "Computer Engineering", "Any + cloud certs"],
@@ -33,7 +33,7 @@ export const cloudDevops: Pathway = {
         {
           id: "scripting",
           title: "Learn Bash & Python scripting",
-          description: "Automate tasks — the core DevOps skill.",
+          description: "Automate tasks: the core DevOps skill.",
           estWeeks: [3, 5],
           resources: [
             { title: "Python for Everybody", type: "course", provider: "Coursera (Michigan)", url: "https://www.coursera.org/specializations/python", free: false },
@@ -44,12 +44,12 @@ export const cloudDevops: Pathway = {
     {
       id: "cloud-cert",
       title: "Phase 2: Cloud Fundamentals & First Cert",
-      summary: "Pick a major cloud provider and get certified — this is the single highest-leverage step.",
+      summary: "Pick a major cloud provider and get certified: this is the single highest-leverage step.",
       milestones: [
         {
           id: "cloud-practitioner",
           title: "Earn a cloud foundational certification",
-          description: "AWS Cloud Practitioner or Azure Fundamentals (AZ-900) — broad overview, resume-friendly.",
+          description: "AWS Cloud Practitioner or Azure Fundamentals (AZ-900): broad overview, resume-friendly.",
           estWeeks: [4, 6],
           resources: [
             { title: "AWS Certified Cloud Practitioner", type: "cert", provider: "AWS", url: "https://aws.amazon.com/certification/certified-cloud-practitioner/", free: false },
@@ -59,7 +59,7 @@ export const cloudDevops: Pathway = {
         {
           id: "associate-cert",
           title: "Earn an associate-level cert",
-          description: "AWS Solutions Architect Associate or Azure Administrator — this is what most job postings actually ask for.",
+          description: "AWS Solutions Architect Associate or Azure Administrator: this is what most job postings actually ask for.",
           estWeeks: [8, 12],
           resources: [
             { title: "AWS Certified Solutions Architect - Associate", type: "course", provider: "Udemy (Stephane Maarek)", url: "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/", free: false },
@@ -100,7 +100,7 @@ export const cloudDevops: Pathway = {
         {
           id: "home-project",
           title: "Build and document a home-lab project",
-          description: "e.g., a CI/CD pipeline deploying a containerized app to the cloud via Terraform — put it on GitHub with a clear README.",
+          description: "e.g., a CI/CD pipeline deploying a containerized app to the cloud via Terraform, then put it on GitHub with a clear README.",
           estWeeks: [3, 6],
           resources: [
             { title: "GitHub", type: "tool", provider: "GitHub", url: "https://github.com/", free: true },
@@ -138,7 +138,7 @@ export const cloudDevops: Pathway = {
     whatEmployersLookFor: [
       "Relevant cloud certs (huge signal at this level)",
       "Real hands-on project experience, not just certification knowledge",
-      "Troubleshooting mindset — can you debug a broken deploy under pressure",
+      "Troubleshooting mindset: can you debug a broken deploy under pressure",
       "Scripting ability to automate repetitive ops work",
     ],
     sampleQuestions: [
@@ -148,7 +148,7 @@ export const cloudDevops: Pathway = {
       "Describe a time you automated a manual process",
     ],
     tips: [
-      "Certs matter a lot here — they're a strong resume-screen signal",
+      "Certs matter a lot here: they're a strong resume-screen signal",
       "Have a home-lab project you can screen-share and explain in detail",
       "Know the tradeoffs of the tools you list, not just that you 'used' them",
     ],

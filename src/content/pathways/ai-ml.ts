@@ -3,7 +3,7 @@ import { Pathway } from "../types";
 export const aiMl: Pathway = {
   slug: "ai-ml",
   title: "AI / Machine Learning Engineering",
-  tagline: "Build and deploy ML/LLM systems — the research-to-production side of AI.",
+  tagline: "Build and deploy ML/LLM systems: the research-to-production side of AI.",
   icon: "🤖",
   matchProfile: {
     degrees: ["Computer Science", "Math", "Statistics", "Physics", "Electrical Engineering"],
@@ -18,12 +18,12 @@ export const aiMl: Pathway = {
     {
       id: "math-foundations",
       title: "Phase 1: Math & Programming Foundations",
-      summary: "The math is not optional here — linear algebra, calculus, and probability underpin everything.",
+      summary: "The math is not optional here: linear algebra, calculus, and probability underpin everything.",
       milestones: [
         {
           id: "python-solid",
           title: "Get solid at Python",
-          description: "You'll live in Python (numpy, pandas, PyTorch) — get genuinely fluent, not just tutorial-level.",
+          description: "You'll live in Python (numpy, pandas, PyTorch), so get genuinely fluent, not just tutorial-level.",
           estWeeks: [4, 6],
           resources: [
             { title: "Python for Data Science, AI & Development", type: "course", provider: "Coursera (IBM)", url: "https://www.coursera.org/learn/python-for-applied-data-science-ai", free: false },
@@ -32,7 +32,7 @@ export const aiMl: Pathway = {
         {
           id: "math-for-ml",
           title: "Linear algebra, calculus & probability for ML",
-          description: "Vectors/matrices, gradients, chain rule, probability distributions — needed to actually understand models, not just call .fit().",
+          description: "Vectors/matrices, gradients, chain rule, probability distributions: needed to actually understand models, not just call .fit().",
           estWeeks: [8, 12],
           resources: [
             { title: "Mathematics for Machine Learning Specialization", type: "course", provider: "Coursera (Imperial College London)", url: "https://www.coursera.org/specializations/mathematics-machine-learning", free: false },
@@ -58,7 +58,7 @@ export const aiMl: Pathway = {
         {
           id: "deep-learning-spec",
           title: "Deep Learning Specialization",
-          description: "CNNs, RNNs, transformers — the architectures behind modern AI.",
+          description: "CNNs, RNNs, transformers: the architectures behind modern AI.",
           estWeeks: [10, 14],
           resources: [
             { title: "Deep Learning Specialization", type: "course", provider: "Coursera (DeepLearning.AI)", url: "https://www.coursera.org/specializations/deep-learning", free: false },
@@ -70,7 +70,7 @@ export const aiMl: Pathway = {
     {
       id: "llms-and-projects",
       title: "Phase 3: LLMs, Tooling & Portfolio",
-      summary: "The current frontier — build with (and understand) modern LLM/agent tooling.",
+      summary: "The current frontier: build with (and understand) modern LLM/agent tooling.",
       milestones: [
         {
           id: "llm-tooling",
@@ -118,7 +118,7 @@ export const aiMl: Pathway = {
     demandLevel: "very high",
     competitiveness: "very high",
     demandNotes:
-      "Extremely high demand and pay, but also the most credential/portfolio-competitive pathway here — many entry 'ML Engineer' postings expect a master's/PhD or very strong project experience. A common route is entering as a SWE or Data Scientist first, then specializing.",
+      "Extremely high demand and pay, but also the most credential/portfolio-competitive pathway here: many entry 'ML Engineer' postings expect a master's/PhD or very strong project experience. A common route is entering as a SWE or Data Scientist first, then specializing.",
     commonTitles: ["Machine Learning Engineer", "Applied Scientist", "AI Engineer", "Research Engineer"],
     typicalTimeToJobReadyMonths: [12, 20],
   },
@@ -132,19 +132,19 @@ export const aiMl: Pathway = {
     whatEmployersLookFor: [
       "Real understanding of model internals, not just library API calls",
       "Ability to justify metric/model choices for a given business problem",
-      "Practical deployment experience (not just notebooks — actual serving/monitoring)",
+      "Practical deployment experience (not just notebooks, actual serving/monitoring)",
       "For research-leaning roles: published work or strong independent projects",
     ],
     sampleQuestions: [
       "Explain the bias-variance tradeoff",
       "How would you handle a severely imbalanced classification dataset?",
       "Design a system to recommend products to users at scale",
-      "Walk me through a model you built — why that architecture, how did you evaluate it?",
+      "Walk me through a model you built: why that architecture, how did you evaluate it?",
     ],
     tips: [
       "Depth on 1-2 strong projects beats breadth across many shallow ones",
       "Be ready to derive/explain the math behind the models you claim to know",
-      "Follow current LLM/agent tooling — it comes up constantly in 2025+ interviews",
+      "Follow current LLM/agent tooling: it comes up constantly in 2025+ interviews",
     ],
   },
 };

@@ -1,6 +1,6 @@
 import { PathwayGrid } from "@/components/PathwayGrid";
 
-export const metadata = { title: "All pathways — PathwayCS" };
+export const metadata = { title: "All pathways | PathwayCS" };
 
 export default function PathwaysPage() {
   return (

@@ -47,7 +47,7 @@ export function RecommenderQuiz() {
       >
         <span className="font-medium">🤔 Not sure which path fits you?</span>{" "}
         <span className="text-black/60 dark:text-white/60">
-          Take a 60-second quiz — degree, experience, and time available — and we&apos;ll recommend a pathway using
+          Take a 60-second quiz (degree, experience, and time available) and we&apos;ll recommend a pathway using
           current job-market data. Fully optional.
         </span>
       </button>

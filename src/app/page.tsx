@@ -9,7 +9,7 @@ export default function Home() {
           Your exact roadmap into any CS career.
         </h1>
         <p className="mt-4 max-w-xl text-lg text-black/60 dark:text-white/60">
-          Step-by-step pathways — what to learn, which courses to take, where to practice — with realistic timelines,
+          Step-by-step pathways (what to learn, which courses to take, where to practice) with realistic timelines,
           job-market stats, and interview prep. No account needed to use it.
         </p>
       </section>

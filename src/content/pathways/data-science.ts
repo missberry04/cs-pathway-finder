@@ -3,7 +3,7 @@ import { Pathway } from "../types";
 export const dataScience: Pathway = {
   slug: "data-science",
   title: "Data Science",
-  tagline: "Turn data into decisions — analytics, statistics, and predictive modeling.",
+  tagline: "Turn data into decisions: analytics, statistics, and predictive modeling.",
   icon: "📊",
   matchProfile: {
     degrees: ["Statistics", "Math", "Economics", "Computer Science", "Physics", "Any quantitative field"],
@@ -11,7 +11,7 @@ export const dataScience: Pathway = {
     goodFitFor: [
       "People who like finding patterns/stories in numbers",
       "Enjoy a mix of coding, math, and communicating findings to non-technical stakeholders",
-      "Comfortable with ambiguity — data science problems are rarely clean",
+      "Comfortable with ambiguity: data science problems are rarely clean",
     ],
   },
   phases: [
@@ -32,7 +32,7 @@ export const dataScience: Pathway = {
         {
           id: "sql-basics",
           title: "Learn SQL",
-          description: "Every data role needs SQL — joins, aggregations, window functions.",
+          description: "Every data role needs SQL: joins, aggregations, window functions.",
           estWeeks: [3, 4],
           resources: [
             { title: "SQL for Data Science", type: "course", provider: "Coursera (UC Davis)", url: "https://www.coursera.org/learn/sql-for-data-science", free: false },
@@ -42,7 +42,7 @@ export const dataScience: Pathway = {
         {
           id: "stats-basics",
           title: "Learn statistics & probability",
-          description: "Descriptive stats, distributions, hypothesis testing, regression — the math underneath every model.",
+          description: "Descriptive stats, distributions, hypothesis testing, regression: the math underneath every model.",
           estWeeks: [5, 8],
           resources: [
             { title: "Statistics with Python Specialization", type: "course", provider: "Coursera (Michigan)", url: "https://www.coursera.org/specializations/statistics-with-python", free: false },
@@ -74,7 +74,7 @@ export const dataScience: Pathway = {
         {
           id: "kaggle",
           title: "Compete in Kaggle competitions",
-          description: "Start with 'Titanic' and 'House Prices', then a real competition — great for learning + portfolio.",
+          description: "Start with 'Titanic' and 'House Prices', then a real competition, great for learning + portfolio.",
           estWeeks: [4, 8],
           resources: [
             { title: "Kaggle", type: "practice", provider: "Kaggle", url: "https://www.kaggle.com/", free: true },
@@ -127,7 +127,7 @@ export const dataScience: Pathway = {
     ],
     whatEmployersLookFor: [
       "Ability to translate a vague business question into an analysis plan",
-      "Solid SQL — this is tested almost everywhere, more than ML theory for entry roles",
+      "Solid SQL: this is tested almost everywhere, more than ML theory for entry roles",
       "Clear communication of findings to non-technical stakeholders",
       "A portfolio with real analysis, not just copied Kaggle notebooks",
     ],
@@ -138,7 +138,7 @@ export const dataScience: Pathway = {
       "Walk me through a project in your portfolio end to end",
     ],
     tips: [
-      "Practice explaining technical results in plain English — this is heavily weighted",
+      "Practice explaining technical results in plain English: this is heavily weighted",
       "SQL fluency alone gets you through most first-round screens",
       "Show your work: a messy-to-clean data story is more convincing than a polished but shallow one",
     ],
